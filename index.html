@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration and Login</title>
+    <style>
+        body {
+            background-color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <div id="register">
+        <h2>Registration Page</h2>
+
+        <form onsubmit="showLogin(event)">
+            <input type="text" placeholder="Full Name" required>
+            <br><br>
+
+            <input type="email" placeholder="Email" required>
+            <br><br>
+
+            <input type="password" placeholder="Password" required>
+            <br><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="login" style="display:none;">
+        <h2>Login Page</h2>
+
+        <form onsubmit="loginSuccess(event)">
+            <input type="email" placeholder="Email" required>
+            <br><br>
+
+            <input type="password" placeholder="Password" required>
+            <br><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function showLogin(event) {
+            event.preventDefault();
+
+            alert("Registration completed successfully!");
+
+            document.getElementById("register").style.display = "none";
+            document.getElementById("login").style.display = "block";
+        }
+
+        function loginSuccess(event) {
+            event.preventDefault();
+            alert("Login successful!");
+        }
+    </script>
+
+</body>
+</html>
